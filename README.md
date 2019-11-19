@@ -6,4 +6,4 @@ This repositiory is intended to upload and manage lab solution for ***Advance Sy
 * Extending the given, but uncompleted pipelined Tiny-RISCV processor model with some new instructions.
 * Extending the Tiny-RISCV processor with an accelerator.
     
-During this course we will be using fifth genaration **RISC** degisn ***(from UC Berkely)***, A high-quality, license-free, royalty-free RISC ISA architecture, to complete the lab task. Documentation are found in **DOC** directory in this repository including all lab instraction and other useful materials. 
+During this course we will be using fifth genaration **RISC** degisn (***from UC Berkely***) , A high-quality, license-free, royalty-free RISC ISA architecture, to complete the lab task. Documentation are found in **DOC** directory in this repository including all lab instraction and other useful materials. 
