@@ -43,7 +43,7 @@ def __quickSort(array, startIndex, endIndex):
 ################################################################
 def Insert(list, size, position, data):
     retVal = -1
-    if position <= size :
+    if position < size :
         list[position] = data
         retVal = 0
     return retVal
