@@ -7,7 +7,7 @@
 # permission of Mohammad Arafath Uz Zaman
 #
 #	File: fibonacci_pymtl3.py
-#	This is a pymtl gcd gloden algo. implementation.
+#	This is a pymtl fibonachhi gloden algo. implementation.
 #
 #   Inputs:
 #           series_length   -> nth element of the fibonacci series
