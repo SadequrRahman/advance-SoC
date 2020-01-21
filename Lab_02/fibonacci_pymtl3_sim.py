@@ -19,7 +19,6 @@ model = Fibonacci(b8)
 
 model.elaborate()
 model.dump_vcd = True
-model.vcd_file_name = "gcd_fsm"
 model.en = b1(0)
 model.ip_ = Bits(8, 10)
 model.apply(SimulationPass)
