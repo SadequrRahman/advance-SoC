@@ -90,8 +90,8 @@ class Gcd_fsm( Component ):
                 s.ra = s.a
                 s.rb = s.b
             
-            elif s.cState == s.S2:
-                pass
+            # elif s.cState == s.S2:
+            #     pass
             
             elif s.cState == s.S3:
                 s.ra = s.ra + s.rb

@@ -12,18 +12,19 @@
 
 
 from pymtl3 import *
+from pymtl3.passes.backends.yosys import TranslationImportPass
+from pymtl3.passes                import TracingConfigs
 from gcd_fsm import *
 
 
 model = Gcd_fsm(b8)
-
 model.elaborate()
-model.dump_vcd = True
-model.vcd_file_name = "gcd_fsm"
+vcd_file_name = model.__class__.__name__
+model.config_tracing = TracingConfigs( tracing='vcd', vcd_file_name=vcd_file_name )
+model.apply(SimulationPass())
 model.en = b1(0)
 model.a = Bits(8, 49)
 model.b = Bits(8, 7)
-model.apply(SimulationPass)
 model.sim_reset()
 model.en = b1(1)
 while model.ack == b1(0):
@@ -32,3 +33,10 @@ while model.ack == b1(0):
 
 model.en = b1(0)
 print("in[0]: {} in[1]: {} out: {} ".format(model.a, model.b, model.out ))
+
+print("\r\nTranslate design into systemVerilog...\r\n")
+ModeltoTranslate = Gcd_fsm(b8)
+ModeltoTranslate.elaborate()
+ModeltoTranslate.yosys_translate_import = True
+ModeltoTranslate = TranslationImportPass()( ModeltoTranslate )
+ModeltoTranslate.elaborate()
